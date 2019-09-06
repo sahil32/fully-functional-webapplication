@@ -7,3 +7,4 @@ install apache webserver, My-sql and python in your machine to get this running 
 more over you need to resove all the dependencies by yourself
 but the source code is keeep intact in these files to help you to make your own customized project as such so you can take the reference of that
 happy coading :)
+start with the index.html
