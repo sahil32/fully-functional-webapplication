@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>KaamKaaZ SignUp Page</title>
+  
+  <link rel="stylesheet" href="./style.css">
+  
+</head>
+<script>
+  var check = function(){
+	if(document.getElementById('password1').value ==
+	document.getElementById('password2').value){
+	document.getElementById("message").style.color = 'green';
+  document.getElementById('message').innerHTML = 'matching';
+}
+	 else{
+	document.getElementById('message').style.color = 'red';
+	document.getElementById('message').innerHTML = 'password not matching';
+	}
+}
+</script>
+
+<body>
+
+  <div id="login-box">
+  <div class="left">
+    <h1>Sign up</h1>
+    <form action="http://192.168.43.124/cgi-bin/pass.py" >
+    
+    <input type="text" name="username" placeholder="Username"  />
+    <input type="text" name="email" placeholder="E-mail" />
+
+    <input type="password" name="password1" id ='password1' placeholder="Password" onkeyup='check();'/>
+    <input type="password" name="password2" id = 'password2' placeholder="Retype password" onkeyup='check();' />
+	<span id ='message'></span>
+	<input type="number" name="number" placeholder="Contact Number"/><br><br>
+	<input type="number" name="age" placeholder="Age"/><br><br>
+	<input type="number" name="salary" placeholder="Current Salary"/><br><br>
+	<textarea  name="experience" placeholder="Past Experience"></textarea><br><br>
+	<input type="radio" name="gender" value="male">Male</input>
+	<input type="radio" name="gender" value="female">Female</input><br><br>
+	<input type="submit" name="signup_submit" value="Sign me up" />
+	</form>
+</body>
+  </div>
+  
+  <div class="right">
+    <span class="loginwith">Sign in with<br />social network</span>
+    
+    <button class="social-signin facebook">Log in with facebook</button>
+    <button class="social-signin twitter">Log in with Twitter</button>
+    <button class="social-signin google">Log in with Google+</button>
+  </div>
+  <div class="or">OR</div>
+</div>
+  
+  
+
+</body>
+
+  
+
+</html>
